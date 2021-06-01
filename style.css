@@ -87,6 +87,8 @@ section {
   padding-top: calc(var(--spacer) * 5);
   padding-bottom: calc(var(--spacer) * 5);
   line-height: 2;
+  margin-top: var(--spacer);
+  margin-bottom: var(--spacer);
 }
 
 p {
@@ -239,4 +241,25 @@ footer a {
 
 .flow > * + * {
   margin-top: calc(var(--spacer) * 2);
+}
+
+/* About Page */
+
+.bg-about-us {
+  background-image: url('./assets/about/mobile/image-hero-whitecup.jpg');
+  background-size: cover;
+}
+
+.bg-commitment {
+  background-image: url('./assets/about/mobile/image-commitment.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: var(--spacer);
+  padding-top: 500px;
+}
+
+.bg-quality {
+  background-image: url('./assets/about/mobile/image-quality.jpg');
+  background-size: 90vw;
+  background-repeat: no-repeat;
 }
