@@ -111,16 +111,9 @@ p {
 
 .collection h2 {
   position: relative;
-  /* color: var(--clr-dark-grey-blue); */
   font-size: var(--fnt-size-700);
   text-transform: lowercase;
-  /* background: linear-gradient(
-    180deg,
-    rgba(254, 252, 247, 0.0001) 0%,
-    #fefcf7 100%
-  ); */
   -webkit-background-clip: text;
-  /* -webkit-text-fill-color: transparent; */
 }
 
 .collection h2::after {
@@ -144,8 +137,9 @@ p {
 }
 
 .choose-us {
-  background-color: var(--clr-dark-grey-blue);
+  background-color: hsla(216, 17%, 21%, 1);
   color: var(--clr-light-cream);
+  height: 900px;
 }
 
 .why-choose {
@@ -155,7 +149,7 @@ p {
   background-position: center calc(var(--spacer) * 3);
   padding: calc(var(--spacer) * 2);
   margin: var(--spacer);
-  /* margin-bottom: -5rem; */
+
   padding-top: calc(var(--spacer) * 10);
   padding-bottom: calc(var(--spacer) * 6);
   border-radius: var(--border-radius);
@@ -171,6 +165,10 @@ p {
 
 .why-choose.bg-van {
   --bg-icon: url('./assets/home/desktop/icon-truck.svg');
+}
+
+section.how-it-works {
+  padding-top: 800px;
 }
 
 .how-it-works .heading {
@@ -197,6 +195,9 @@ footer {
 }
 
 footer nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer);
   list-style: none;
 }
 
