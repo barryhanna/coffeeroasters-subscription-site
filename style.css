@@ -258,8 +258,65 @@ footer a {
   padding-top: 500px;
 }
 
-.bg-quality {
+.quality {
+  position: relative;
+  background-color: var(--clr-dark-grey-blue);
+  margin-top: calc(var(--spacer) * 5);
+  padding: 1rem;
+  padding-top: 10rem;
+  overflow: visible;
+}
+
+.quality h2 {
+  font-size: var(--fnt-size-500);
+  line-height: 1;
+  color: var(--clr-light-cream);
+}
+
+.quality::before {
+  position: absolute;
+  display: block;
+  top: -15%;
+  left: 2rem;
+  content: '';
   background-image: url('./assets/about/mobile/image-quality.jpg');
-  background-size: 90vw;
+  width: 279px;
+  height: 156px;
   background-repeat: no-repeat;
+  background-position: center center;
+  background-position-y: -78px;
+  border-radius: var(--border-radius);
+}
+
+.addresses h2 {
+  opacity: 0.5;
+  padding-top: var(--spacer);
+  padding-bottom: calc(var(--spacer) * 2);
+}
+
+.address {
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding-top: calc(var(--spacer) * 4);
+  margin-bottom: var(--spacer);
+
+  padding-bottom: calc(var(--spacer) * 2);
+}
+
+.address h3 {
+  margin: var(--spacer);
+}
+
+.address p {
+  line-height: 1.8;
+}
+
+.address.uk {
+  background-image: url('./assets/about/desktop/illustration-uk.svg');
+}
+.address.ca {
+  background-image: url('./assets/about/desktop/illustration-canada.svg');
+}
+.address.au {
+  background-image: url('./assets/about/desktop/illustration-australia.svg');
 }
