@@ -320,3 +320,25 @@ footer a {
 .address.au {
   background-image: url('./assets/about/desktop/illustration-australia.svg');
 }
+
+/* Plan */
+.create-plan-hero h1 {
+  color: var(--clr-light-cream);
+}
+
+.create-plan-bg {
+  background-image: url('./assets/plan/mobile/image-hero-blackcup.jpg');
+  background-size: cover;
+}
+
+.how-it-works-plan {
+  background-color: var(--clr-dark-grey-blue);
+  color: var(--clr-light-cream);
+  margin-left: calc(var(--spacer) * -1);
+  margin-right: calc(var(--spacer) * -1);
+}
+
+.how-it-works-plan h3 {
+  font-size: var(--fnt-size-500);
+  margin: calc(var(--spacer) / 2);
+}

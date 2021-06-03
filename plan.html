@@ -8,30 +8,72 @@
 </head>
 
 <body>
-  Home
-  About us
-  Create your plan
+  <header>
+    <div class="logo">
+      <img src="./assets/shared/desktop/logo.svg" alt="Coffee Roasters Logo">
+    </div>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>About us</li>
+        <li>Create your plan</li>
+      </ul>
+      <button class="nav-toggle"><img src="./assets/shared/mobile/icon-hamburger.svg" alt=""></button>
+    </nav>
+  </header>
 
-  Create a plan
-  Build a subscription plan that best fits your needs. We offer an assortment of the best
-  artisan coffees from around the globe delivered fresh to your door.
+  <section class="create-plan-hero create-plan-bg dark-bg flow">
+    <h1>Create a plan</h1>
+    <p>Build a subscription plan that best fits your needs. We offer an assortment of the best
+      artisan coffees from around the globe delivered fresh to your door.</p>
+  </section>
 
-  01
-  Pick your coffee
-  Select from our evolving range of artisan coffees. Our beans are ethically
-  sourced and we pay fair prices for them. There's new coffees in all profiles
-  every month for you to try out.
+  <section class="how-it-works-plan dark-bg flow">
+    <div class="how-it-works flow">
+      <p class="step-number">01</p>
+      <h3>Pick your coffee</h3>
+      <p>Select from our evolving range of artisan coffees. Our beans are ethically
+        sourced and we pay fair prices for them. There are new coffees in all profiles
+        every month for you to try out.</p>
+    </div>
 
-  02
-  Choose the frequency
-  Customize your order frequency, quantity, even your roast style and grind type.
-  Pause, skip or cancel your subscription with no commitment through our online portal.
+    <div class="how-it-works flow">
+      <p class="step-number">02</p>
+      <h3>Choose the frequency</h3>
+      <p>Customize your order frequency, quantity, even your roast style and grind type.
+        Pause, skip or cancel your subscription with no commitment through our online portal.</p>
+    </div>
 
-  03
-  Receive and enjoy!
-  We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning
-  world-class coffees curated to provide a distinct tasting experience.
+    <div class="how-it-works flow">
+      <p class="step-number">03</p>
+      <h3>Receive and enjoy!</h3>
+      <p>We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning
+        world-class coffees curated to provide a distinct tasting experience.</p>
+    </div>
+  </section>
 
+  <section class="flow">
+    <form class="flow" action="#">
+      <h3>How do you drink your coffee?</h3>
+      <ul>
+        <li>
+          <label for="capsule">Capsule</label>
+          <input type="radio" name="packaged" value="capsule">
+        </li>
+        <li>
+          <label for="filter">Filter</label>
+          <input type="radio" name="packaged" value="filter" checked>
+        </li>
+        <li>
+          <label for="">Espresso</label>
+          <input type="radio" name="packaged" value="espresso">
+        </li>
+      </ul>
+
+      <input class="btn" type="submit" value="Create my plan!">
+
+    </form>
+  </section>
   01 Preferences
   02 Bean type
   03 Quantity
@@ -98,7 +140,7 @@
 
   Create my plan!
 
-  <!-- Modal -->
+  <!-- Modal 
   Order Summary
 
   “I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
@@ -110,11 +152,25 @@
   $_____/month
 
   Checkout
-  <!-- End modal -->
+   End modal -->
 
-  Home
-  About us
-  Create your plan
+  <footer class="flow">
+    <div class="logo">
+      <img src="./assets/shared/desktop/logo-white.svg" alt="Coffee Roasters Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Create your plan</a></li>
+      </ul>
+    </nav>
+    <div class="social-icons">
+      <a href="#"><img src="./assets/shared/desktop/icon-facebook.svg" alt="Facebook Logo"></a>
+      <a href="#"><img src="./assets/shared/desktop/icon-twitter.svg" alt="Twitter Logo"></a>
+      <a href="#"><img src="./assets/shared/desktop/icon-instagram.svg" alt="Instagram Logo"></a>
+    </div>
+  </footer>
 </body>
 
 </html>
