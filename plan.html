@@ -52,28 +52,40 @@
     </div>
   </section>
 
-  <section class="flow">
-    <form class="flow" action="#">
-      <h3>How do you drink your coffee?</h3>
+  <form class="coffee-form" action="#">
+    <div class="coffee-option flow">
+      <div class="coffee-option__heading flow">
+        <h3>How do you drink your coffee?</h3>
+        <button class="toggle-show-btn"><img src="https://assets.codepen.io/781124/icon-arrow.svg" /></button>
+      </div>
       <ul>
         <li>
-          <label for="capsule">Capsule</label>
-          <input type="radio" name="packaged" value="capsule">
+          <input type="radio" name="packaged" value="capsule" id="capsule">
+          <label for="capsule">
+            <h3>Capsule</h3>
+            <p>$7.20 per shipment. Includes free first-class shipping.</p>
+          </label>
         </li>
         <li>
-          <label for="filter">Filter</label>
-          <input type="radio" name="packaged" value="filter" checked>
+          <input type="radio" name="packaged" value="filter" id="filter">
+          <label for="filter">
+            <h3>Filter</h3>
+            <p>$9.60 per shipment. Includes free priority shipping.</p>
+          </label>
         </li>
         <li>
-          <label for="">Espresso</label>
-          <input type="radio" name="packaged" value="espresso">
+          <input type="radio" name="packaged" value="espresso" id="espresso">
+          <label for="espresso">
+            <h3>Espresso</h3>
+            <p>$12.00 per shipment. Includes free priority shipping.</p>
+          </label>
         </li>
       </ul>
-
-      <input class="btn" type="submit" value="Create my plan!">
-
-    </form>
+    </div>
+  </form>
   </section>
+
+  <!--
   01 Preferences
   02 Bean type
   03 Quantity
@@ -139,7 +151,7 @@
   sent to me _____.”
 
   Create my plan!
-
+    -->
   <!-- Modal 
   Order Summary
 
@@ -171,6 +183,7 @@
       <a href="#"><img src="./assets/shared/desktop/icon-instagram.svg" alt="Instagram Logo"></a>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>

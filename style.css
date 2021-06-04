@@ -342,3 +342,84 @@ footer a {
   font-size: var(--fnt-size-500);
   margin: calc(var(--spacer) / 2);
 }
+
+.toggle-show-btn {
+  display: inline-block;
+  border: 0;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: var(--fnt-ff-heading);
+  background-color: transparent;
+  padding: 1em;
+  cursor: pointer;
+}
+
+.toggle-show-btn:active,
+.toggle-show-btn:hover {
+  opacity: 0.6;
+}
+
+.toggle-show-btn:disabled {
+  background-color: hsl(215, 5%, 54%);
+}
+
+.toggle-show-btn {
+  transform: rotate(0deg);
+}
+
+.open .toggle-show-btn {
+  transform: rotate(180deg);
+}
+
+.coffee-form {
+  width: 100%;
+}
+
+.coffee-option ul {
+  display: none;
+  list-style: none;
+}
+
+.coffee-option.open ul {
+  display: revert;
+}
+
+.coffee-option__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.coffee-option input[type='radio'] {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+.coffee-option input[type='radio'] + label {
+  display: block;
+  padding: 1em;
+  border-radius: 9px;
+}
+
+.coffee-option input[type='radio']:checked + label,
+.coffee-option input[type='radio']:checked + label > h3 {
+  color: white;
+  background-color: var(--clr-dark-cyan);
+}
+
+.coffee-option__heading h3 {
+  color: var(--clr-grey);
+}
+
+.coffee-option li {
+  display: flex;
+  gap: var(--spacer);
+}
+
+.coffee-option label {
+  text-align: left;
+}
+
+.coffee-option label > h3 {
+  color: var(--clr-dark-grey-blue);
+}
