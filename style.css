@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Fraunces:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Fraunces:wght@900&display=fallback');
 
 *,
 *::after,
@@ -6,6 +6,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* outline: 1px solid crimson; */
 }
 
 :root {
@@ -13,6 +14,7 @@
   --clr-dark-grey-blue: hsl(215, 19%, 25%);
   --clr-pale-orange: hsl(25, 94%, 86%);
   --clr-light-cream: hsl(43, 78%, 98%);
+  --clr-lighter-cream: hsl(40, 29%, 94%);
   --clr-grey: hsl(215, 5%, 54%);
 
   --fnt-ff-heading: 'Fraunces', serif;
@@ -243,6 +245,22 @@ footer a {
   margin-top: calc(var(--spacer) * 2);
 }
 
+.flow\:small > * + * {
+  margin-top: var(--spacer);
+}
+
+.flow\:smallest > * + * {
+  margin-top: calc(var(--spacer) / 2);
+}
+
+.flow\:large > * + * {
+  margin-top: calc(var(--spacer) * 3);
+}
+
+.flow\:largest > * + * {
+  margin-top: calc(var(--spacer) * 3);
+}
+
 /* About Page */
 
 .bg-about-us {
@@ -375,6 +393,10 @@ footer a {
   width: 100%;
 }
 
+.coffee-option {
+  margin: var(--spacer) 0;
+}
+
 .coffee-option ul {
   display: none;
   list-style: none;
@@ -382,6 +404,7 @@ footer a {
 
 .coffee-option.open ul {
   display: revert;
+  /* background-color: var(--clr-light-cream); */
 }
 
 .coffee-option__heading {
@@ -413,7 +436,12 @@ footer a {
 
 .coffee-option li {
   display: flex;
+  margin-top: calc(var(--spacer) * 2);
+  margin-bottom: calc(var(--spacer) * 2);
   gap: var(--spacer);
+  background-color: var(--clr-lighter-cream);
+  border-radius: var(--border-radius);
+  overflow: hidden;
 }
 
 .coffee-option label {

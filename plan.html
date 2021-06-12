@@ -29,7 +29,7 @@
   </section>
 
   <section class="how-it-works-plan dark-bg flow">
-    <div class="how-it-works flow">
+    <div class="how-it-works">
       <p class="step-number">01</p>
       <h3>Pick your coffee</h3>
       <p>Select from our evolving range of artisan coffees. Our beans are ethically
@@ -56,32 +56,168 @@
     <div class="coffee-option flow">
       <div class="coffee-option__heading flow">
         <h3>How do you drink your coffee?</h3>
-        <button class="toggle-show-btn"><img src="https://assets.codepen.io/781124/icon-arrow.svg" /></button>
+        <button class="toggle-show-btn">
+          <img src="./assets/plan/desktop/icon-arrow.svg" />
+        </button>
       </div>
       <ul>
         <li>
           <input type="radio" name="packaged" value="capsule" id="capsule">
-          <label for="capsule">
+          <label for="capsule" class="flow:small">
+            <h3>Capsule</h3>
+            <p>Compatible with Nespresso systems and similar brewers</p>
+          </label>
+        </li>
+        <li>
+          <input type="radio" name="packaged" value="filter" id="filter">
+          <label for="filter" class="flow:small">
+            <h3>Filter</h3>
+            <p>For pour over or drip methods like Aeropress. Chemex, and V60</p>
+          </label>
+        </li>
+        <li>
+          <input type="radio" name="packaged" value="espresso" id="espresso">
+          <label for="espresso" class="flow:small">
+            <h3>Espresso</h3>
+            <p>Dense and finely ground beans for an intense, flavorful experience</p>
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <div class="coffee-option flow">
+      <div class="coffee-option__heading flow">
+        <h3>What type of coffee?</h3>
+        <button class="toggle-show-btn">
+          <img src="./assets/plan/desktop/icon-arrow.svg" />
+        </button>
+      </div>
+      <ul>
+        <li>
+          <input type="radio" name="type" value="single" id="single">
+          <label for="single" class="flow:small">
+            <h3>Single Origin</h3>
+            <p>Distinct, high quality coffee from a specific family-owned farm</p>
+          </label>
+        </li>
+        <li>
+          <input type="radio" name="type" value="decaf" id="decaf">
+          <label for="decaf" class="flow:small">
+            <h3>Decaf</h3>
+            <p>Just like regular coffee, except the caffeine has been removed</p>
+          </label>
+        </li>
+        <li>
+          <input type="radio" name="type" value="blended" id="blended">
+          <label for="blended" class="flow:small">
+            <h3>Blended</h3>
+            <p>Combination of two or three dark roasted beans of organic coffees</p>
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <div class="coffee-option flow">
+      <div class="coffee-option__heading flow">
+        <h3>How much would you like?</h3>
+        <button class="toggle-show-btn">
+          <img src="./assets/plan/desktop/icon-arrow.svg" />
+        </button>
+      </div>
+      <ul>
+        <li>
+          <input type="radio" name="amount" value="250" id="250">
+          <label for="250" class="flow:small">
+            <h3>250g</h3>
+            <p>Perfect for the solo drinker. Yields about 12 delicious cups.</p>
+          </label>
+        </li>
+        <li>
+          <input type="radio" name="amount" value="500" id="500">
+          <label for="500" class="flow:small">
+            <h3>500g</h3>
+            <p>Perfect option for a couple. Yields about 40 delectable cups.</p>
+          </label>
+        </li>
+        <li>
+          <input type="radio" name="amount" value="1000" id="1000">
+          <label for="1000" class="flow:small">
+            <h3>1000g</h3>
+            <p>Perfect for offices and events. Yields about 90 delightful cups.</p>
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <div class="coffee-option flow">
+      <div class="coffee-option__heading flow">
+        <h3>Want us to grind them?</h3>
+        <button class="toggle-show-btn">
+          <img src="./assets/plan/desktop/icon-arrow.svg" />
+        </button>
+      </div>
+      <ul>
+        <li>
+          <input type="radio" name="grind" value="wholebean" id="wholebean">
+          <label for="wholebean" class="flow:small">
+            <h3>Wholebean</h3>
+            <p>Best choice if you cherish the full sensory experience</p>
+          </label>
+        </li>
+        <li>
+          <input type="radio" name="grind" value="filter" id="filter">
+          <label for="filter" class="flow:small">
+            <h3>Filter</h3>
+            <p>For drip or pour-over coffee methods such as V60 or Aeropress</p>
+          </label>
+        </li>
+        <li>
+          <input type="radio" name="grind" value="cafetiere" id="cafetiere">
+          <label for="cafetiere" class="flow:small">
+            <h3>Cafetiére</h3>
+            <p>Course ground beans specially suited for french press coffee</p>
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <div class="coffee-option flow">
+      <div class="coffee-option__heading flow">
+        <h3>How often should we deliver?</h3>
+        <button class="toggle-show-btn">
+          <img src="./assets/plan/desktop/icon-arrow.svg" />
+        </button>
+      </div>
+      <ul>
+        <li>
+          <input type="radio" name="packaged" value="capsule" id="capsule">
+          <label for="capsule" class="flow:small">
             <h3>Capsule</h3>
             <p>$7.20 per shipment. Includes free first-class shipping.</p>
           </label>
         </li>
         <li>
           <input type="radio" name="packaged" value="filter" id="filter">
-          <label for="filter">
+          <label for="filter" class="flow:small">
             <h3>Filter</h3>
             <p>$9.60 per shipment. Includes free priority shipping.</p>
           </label>
         </li>
         <li>
           <input type="radio" name="packaged" value="espresso" id="espresso">
-          <label for="espresso">
+          <label for="espresso" class="flow:small">
             <h3>Espresso</h3>
             <p>$12.00 per shipment. Includes free priority shipping.</p>
           </label>
         </li>
       </ul>
     </div>
+
+    <div class="order-summary">
+      <p>I drink my coffee as <span>Filter</span>, with a <span>Decaf</span> type of bean. <span>250g</span> ground ala
+        <span>Cafetiére</span>, sent to me <span>Every Week</span>.</p>
+    </div>
+    <button class="btn">Create my plan!</button>
   </form>
   </section>
 

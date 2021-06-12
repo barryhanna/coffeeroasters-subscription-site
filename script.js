@@ -1,9 +1,11 @@
-const toggleBtn = document.querySelector('.toggle-show-btn');
+const toggleBtns = document.querySelectorAll('.toggle-show-btn');
 
-toggleBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  toggleOption(e.target);
-});
+toggleBtns.forEach((button) =>
+  button.addEventListener('click', (e) => {
+    e.preventDefault();
+    toggleOption(e.target);
+  })
+);
 
 function toggleOption(element) {
   element.closest('.coffee-option').classList.toggle('open');
