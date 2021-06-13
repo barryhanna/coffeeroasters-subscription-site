@@ -394,7 +394,7 @@ footer a {
 }
 
 .coffee-option {
-  margin: var(--spacer) 0;
+  margin: var(--spacer);
 }
 
 .coffee-option ul {
@@ -431,6 +431,7 @@ footer a {
 }
 
 .coffee-option__heading h3 {
+  text-align: left;
   color: var(--clr-grey);
 }
 
@@ -450,4 +451,73 @@ footer a {
 
 .coffee-option label > h3 {
   color: var(--clr-dark-grey-blue);
+}
+
+.order-summary {
+  background-color: var(--clr-dark-grey-blue);
+  font-size: var(--fnt-size-400);
+  font-family: var(--fnt-ff-heading);
+  text-align: left;
+  color: hsl(43, 78%, 98%);
+  padding: var(--spacer);
+  padding-block-end: calc(var(--spacer) * 2);
+  margin-top: calc(var(--spacer) * 6);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.order-summary h3 {
+  color: var(--clr-grey);
+  font-family: var(--fnt-ff-body);
+  font-size: var(--fnt-size-200);
+  text-transform: uppercase;
+  margin-top: var(--spacer);
+  margin-bottom: var(--spacer);
+}
+
+.order-summary span {
+  color: var(--clr-dark-cyan);
+}
+
+.order-summary-modal {
+  display: none;
+  background-color: var(--clr-light-cream);
+  text-align: left;
+  padding: var(--spacer);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.order-summary-modal h3 {
+  color: white;
+  padding: calc(var(--spacer) * 2) var(--spacer);
+  background-color: var(--clr-dark-grey-blue);
+}
+
+.order-summary-modal p {
+  color: var(--clr-grey);
+  padding-left: var(--spacer);
+  line-height: 1.6;
+}
+
+.order-summary-modal p:first-of-type {
+  font-family: var(--fnt-ff-heading);
+  font-size: var(--fnt-size-400);
+}
+
+.order-summary-modal p span {
+  color: var(--clr-dark-cyan);
+}
+
+.order-summary-modal button {
+  display: block;
+  width: 100%;
+  font-size: var(--fnt-size-300);
+}
+
+.plan-btn {
+  padding: 1em 1.5em;
+  font-size: var(--fnt-size-300);
+  margin-top: calc(var(--spacer) * 2);
+  margin-bottom: calc(var(--spacer) * 4);
 }

@@ -10,3 +10,9 @@ toggleBtns.forEach((button) =>
 function toggleOption(element) {
   element.closest('.coffee-option').classList.toggle('open');
 }
+
+function initialiseOrderSummary() {
+  console.log('Initialised');
+}
+
+document.onload = initialiseOrderSummary();

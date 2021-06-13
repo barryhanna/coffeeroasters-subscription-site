@@ -62,7 +62,7 @@
       </div>
       <ul>
         <li>
-          <input type="radio" name="packaged" value="capsule" id="capsule">
+          <input type="radio" name="packaged" value="capsule" id="capsule" checked="checked">
           <label for="capsule" class="flow:small">
             <h3>Capsule</h3>
             <p>Compatible with Nespresso systems and similar brewers</p>
@@ -94,7 +94,7 @@
       </div>
       <ul>
         <li>
-          <input type="radio" name="type" value="single" id="single">
+          <input type="radio" name="type" value="single" id="single" checked="checked">
           <label for="single" class="flow:small">
             <h3>Single Origin</h3>
             <p>Distinct, high quality coffee from a specific family-owned farm</p>
@@ -126,21 +126,21 @@
       </div>
       <ul>
         <li>
-          <input type="radio" name="amount" value="250" id="250">
+          <input type="radio" name="amount" value="250g" id="250" checked="checked">
           <label for="250" class="flow:small">
             <h3>250g</h3>
             <p>Perfect for the solo drinker. Yields about 12 delicious cups.</p>
           </label>
         </li>
         <li>
-          <input type="radio" name="amount" value="500" id="500">
+          <input type="radio" name="amount" value="500g" id="500">
           <label for="500" class="flow:small">
             <h3>500g</h3>
             <p>Perfect option for a couple. Yields about 40 delectable cups.</p>
           </label>
         </li>
         <li>
-          <input type="radio" name="amount" value="1000" id="1000">
+          <input type="radio" name="amount" value="1000g" id="1000">
           <label for="1000" class="flow:small">
             <h3>1000g</h3>
             <p>Perfect for offices and events. Yields about 90 delightful cups.</p>
@@ -158,7 +158,7 @@
       </div>
       <ul>
         <li>
-          <input type="radio" name="grind" value="wholebean" id="wholebean">
+          <input type="radio" name="grind" value="wholebean" id="wholebean" checked="checked">
           <label for="wholebean" class="flow:small">
             <h3>Wholebean</h3>
             <p>Best choice if you cherish the full sensory experience</p>
@@ -190,23 +190,23 @@
       </div>
       <ul>
         <li>
-          <input type="radio" name="packaged" value="capsule" id="capsule">
-          <label for="capsule" class="flow:small">
-            <h3>Capsule</h3>
+          <input type="radio" name="frequency" value="weekly" id="weekly" checked="checked">
+          <label for="weekly" class="flow:small">
+            <h3>Every Week</h3>
             <p>$7.20 per shipment. Includes free first-class shipping.</p>
           </label>
         </li>
         <li>
-          <input type="radio" name="packaged" value="filter" id="filter">
-          <label for="filter" class="flow:small">
-            <h3>Filter</h3>
+          <input type="radio" name="frequency" value="twoweeks" id="twoweeks">
+          <label for="twoweeks" class="flow:small">
+            <h3>Every 2 weeks</h3>
             <p>$9.60 per shipment. Includes free priority shipping.</p>
           </label>
         </li>
         <li>
-          <input type="radio" name="packaged" value="espresso" id="espresso">
-          <label for="espresso" class="flow:small">
-            <h3>Espresso</h3>
+          <input type="radio" name="frequency" value="monthly" id="monthly">
+          <label for="monthly" class="flow:small">
+            <h3>Every month</h3>
             <p>$12.00 per shipment. Includes free priority shipping.</p>
           </label>
         </li>
@@ -214,93 +214,28 @@
     </div>
 
     <div class="order-summary">
-      <p>I drink my coffee as <span>Filter</span>, with a <span>Decaf</span> type of bean. <span>250g</span> ground ala
-        <span>Cafetiére</span>, sent to me <span>Every Week</span>.</p>
+      <h3>Order Summary</h3>
+      <p>&ldquo;I drink my coffee as <span>Filter</span>, with a <span>Decaf</span> type of bean. <span>250g</span>
+        ground ala
+        <span>Cafetiére</span>, sent to me <span>Every Week</span>.&rdquo;</p>
     </div>
-    <button class="btn">Create my plan!</button>
+    <button class="btn plan-btn">Create my plan!</button>
   </form>
   </section>
 
-  <!--
-  01 Preferences
-  02 Bean type
-  03 Quantity
-  04 Grind option
-  05 Deliveries
 
-  How do you drink your coffee?
-
-  Capsule
-  Compatible with Nespresso systems and similar brewers
-
-  Filter
-  For pour over or drip methods like Aeropress, Chemex, and V60
-
-  Espresso
-  Dense and finely ground beans for an intense, flavorful experience
-
-  What type of coffee?
-
-  Single origin
-  Distinct, high quality coffee from a specific family-owned farm
-
-  Decaf
-  Just like regular coffee, except the caffeine has been removed
-
-  Blended
-  Combination of two or three dark roasted beans of organic coffees
-
-  How much would you like?
-  250g
-  Perfect for the solo drinker. Yields about 12 delicious cups.
-
-  500g
-  Perfect option for a couple. Yields about 40 delectable cups.
-
-  1000g
-  Perfect for offices and events. Yields about 90 delightful cups.
-
-  Want us to grind them?
-
-  Wholebean
-  Best choice if you cherish the full sensory experience
-
-  Filter
-  For drip or pour-over coffee methods such as V60 or Aeropress
-
-  Cafetiére
-  Course ground beans specially suited for french press coffee
-
-  How often should we deliver?
-
-  Every week
-  $14.00 per shipment. Includes free first-class shipping.
-
-  Every 2 weeks
-  $17.25 per shipment. Includes free priority shipping.
-
-  Every month
-  $22.50 per shipment. Includes free priority shipping.
-
-  Order Summary
-  “I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
-  sent to me _____.”
-
-  Create my plan!
-    -->
-  <!-- Modal 
-  Order Summary
-
-  “I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
-  sent to me _____.”
-
-  Is this correct? You can proceed to checkout or go back to plan selection if something
-  is off. Subscription discount codes can also be redeemed at the checkout.
-
-  $_____/month
-
-  Checkout
-   End modal -->
+  <div class="order-summary-modal flow">
+    <h3>Order Summary</h3>
+    <p>&ldquo;I drink coffee <span id="order-summary-packaged">Capsule</span>, with a <span
+        id="order-summary-type">Single</span>
+      type of
+      bean. <span id="order-summary-amount">250g</span> ground ala
+      <span id="order-summary-grind">Cafetiére</span>,
+      sent to me <span id="order-summary-frequency">Every Week</span>.&rdquo;</p>
+    <p>Is this correct? You can proceed to checkout or go back to plan selection if something
+      is off. Subscription discount codes can also be redeemed at the checkout.</p>
+    <button class="btn">Checkout - $<span id="order-total">14.00</span> / mo</button>
+  </div>
 
   <footer class="flow">
     <div class="logo">
