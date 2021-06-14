@@ -480,16 +480,18 @@ footer a {
 }
 
 .order-summary-modal {
-  display: none;
+  /* display: none; */
   background-color: var(--clr-light-cream);
   text-align: left;
-  padding: var(--spacer);
+  /* padding: var(--spacer); */
   border-radius: var(--border-radius);
+  margin-bottom: var(--spacer);
   overflow: hidden;
 }
 
 .order-summary-modal h3 {
   color: white;
+  font-size: var(--fnt-size-500);
   padding: calc(var(--spacer) * 2) var(--spacer);
   background-color: var(--clr-dark-grey-blue);
 }
@@ -497,6 +499,8 @@ footer a {
 .order-summary-modal p {
   color: var(--clr-grey);
   padding-left: var(--spacer);
+  padding-right: var(--spacer);
+  margin-left: 0;
   line-height: 1.6;
 }
 
@@ -509,10 +513,11 @@ footer a {
   color: var(--clr-dark-cyan);
 }
 
-.order-summary-modal button {
+.order-summary-modal .btn {
   display: block;
-  width: 100%;
+  width: calc(100% - calc(var(--spacer) * 2));
   font-size: var(--fnt-size-300);
+  margin: var(--spacer);
 }
 
 .plan-btn {
