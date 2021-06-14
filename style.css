@@ -479,6 +479,10 @@ footer a {
   color: var(--clr-dark-cyan);
 }
 
+#order-summary-modal:target {
+  display: block;
+}
+
 .order-summary-modal {
   /* display: none; */
   background-color: var(--clr-light-cream);

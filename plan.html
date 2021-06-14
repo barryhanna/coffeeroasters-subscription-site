@@ -52,7 +52,7 @@
     </div>
   </section>
 
-  <form class="coffee-form" action="#">
+  <form id="coffee-form" class="coffee-form" action="#">
     <div class="coffee-option flow">
       <div class="coffee-option__heading flow">
         <h3>How do you drink your coffee?</h3>
@@ -215,23 +215,25 @@
 
     <div class="order-summary">
       <h3>Order Summary</h3>
-      <p>&ldquo;I drink my coffee as <span>Filter</span>, with a <span>Decaf</span> type of bean. <span>250g</span>
+      <p>&ldquo;I drink my coffee as <span id="order-summary-packaged">Filter</span>, with a <span
+          id="order-summary-type">Decaf</span> type of bean. <span id="order-summary-amount">250g</span>
         ground ala
-        <span>Cafetiére</span>, sent to me <span>Every Week</span>.&rdquo;</p>
+        <span id="order-summary-grind">Cafetiére</span>, sent to me <span id="order-summary-frequency">Every
+          Week</span>.&rdquo;</p>
     </div>
     <button class="btn plan-btn">Create my plan!</button>
   </form>
   </section>
 
 
-  <div class="order-summary-modal flow">
+  <div id="order-summary-modal" class="order-summary-modal flow">
     <h3>Order Summary</h3>
-    <p>&ldquo;I drink coffee <span id="order-summary-packaged">Capsule</span>, with a <span
-        id="order-summary-type">Single</span>
+    <p>&ldquo;I drink coffee <span id="order-summary-modal-packaged">Capsule</span>, with a <span
+        id="order-summary-modal-type">Single</span>
       type of
-      bean. <span id="order-summary-amount">250g</span> ground ala
-      <span id="order-summary-grind">Cafetiére</span>,
-      sent to me <span id="order-summary-frequency">Every Week</span>.&rdquo;</p>
+      bean. <span id="order-summary-modal-amount">250g</span> ground ala
+      <span id="order-summary-modal-grind">Cafetiére</span>,
+      sent to me <span id="order-summary-modal-frequency">Every Week</span>.&rdquo;</p>
     <p>Is this correct? You can proceed to checkout or go back to plan selection if something
       is off. Subscription discount codes can also be redeemed at the checkout.</p>
     <button class="btn">Checkout - $<span id="order-total">14.00</span> / mo</button>
