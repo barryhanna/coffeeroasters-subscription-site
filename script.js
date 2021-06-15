@@ -93,9 +93,26 @@ function toggleOption(element) {
 
 // Dismiss modal when checkout button is clicked.
 const checkoutBtn = document.querySelector('.checkout-btn');
+const orderSummaryModal = document.querySelector('.order-summary-modal');
+const orderSummaryModalContent = document.querySelector(
+  '.order-summary-modal .content'
+);
 
 checkoutBtn.addEventListener('click', (e) => {
   e.currentTarget.closest('.order-summary-modal').classList.toggle('open');
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && orderSummaryModal.classList.contains('open')) {
+    orderSummaryModal.classList.remove('open');
+  }
+});
+
+orderSummaryModal.addEventListener('click', (e) => {
+  const isOutside = !e.target.closest('.content');
+  if (isOutside) {
+    orderSummaryModal.classList.remove('open');
+  }
 });
 
 document.onload = updateOrderSummaries();
