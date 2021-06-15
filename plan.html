@@ -52,7 +52,7 @@
     </div>
   </section>
 
-  <form id="coffee-form" class="coffee-form" action="#">
+  <form id="coffee-form" class="coffee-form">
     <div class="coffee-option flow">
       <div class="coffee-option__heading flow">
         <h3>How do you drink your coffee?</h3>
@@ -190,21 +190,21 @@
       </div>
       <ul>
         <li>
-          <input type="radio" name="frequency" value="weekly" id="weekly" checked="checked">
+          <input type="radio" name="frequency" value="Every Week" id="weekly" checked="checked">
           <label for="weekly" class="flow:small">
             <h3>Every Week</h3>
             <p>$7.20 per shipment. Includes free first-class shipping.</p>
           </label>
         </li>
         <li>
-          <input type="radio" name="frequency" value="twoweeks" id="twoweeks">
+          <input type="radio" name="frequency" value="Every 2 weeks" id="twoweeks">
           <label for="twoweeks" class="flow:small">
             <h3>Every 2 weeks</h3>
             <p>$9.60 per shipment. Includes free priority shipping.</p>
           </label>
         </li>
         <li>
-          <input type="radio" name="frequency" value="monthly" id="monthly">
+          <input type="radio" name="frequency" value="Every month" id="monthly">
           <label for="monthly" class="flow:small">
             <h3>Every month</h3>
             <p>$12.00 per shipment. Includes free priority shipping.</p>
@@ -227,16 +227,18 @@
 
 
   <div id="order-summary-modal" class="order-summary-modal flow">
-    <h3>Order Summary</h3>
-    <p>&ldquo;I drink coffee <span id="order-summary-modal-packaged">Capsule</span>, with a <span
-        id="order-summary-modal-type">Single</span>
-      type of
-      bean. <span id="order-summary-modal-amount">250g</span> ground ala
-      <span id="order-summary-modal-grind">Cafetiére</span>,
-      sent to me <span id="order-summary-modal-frequency">Every Week</span>.&rdquo;</p>
-    <p>Is this correct? You can proceed to checkout or go back to plan selection if something
-      is off. Subscription discount codes can also be redeemed at the checkout.</p>
-    <button class="btn">Checkout - $<span id="order-total">14.00</span> / mo</button>
+    <div class="content flow">
+      <h3>Order Summary</h3>
+      <p>&ldquo;I drink coffee <span id="order-summary-modal-packaged">Capsule</span>, with a <span
+          id="order-summary-modal-type">Single</span>
+        type of
+        bean. <span id="order-summary-modal-amount">250g</span> ground ala
+        <span id="order-summary-modal-grind">Cafetiére</span>,
+        sent to me <span id="order-summary-modal-frequency">Every Week</span>.&rdquo;</p>
+      <p>Is this correct? You can proceed to checkout or go back to plan selection if something
+        is off. Subscription discount codes can also be redeemed at the checkout.</p>
+      <button class="btn checkout-btn">Checkout - $<span id="order-total">14.00</span> / mo</button>
+    </div>
   </div>
 
   <footer class="flow">

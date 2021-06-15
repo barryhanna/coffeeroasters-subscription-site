@@ -230,6 +230,7 @@ footer a {
   color: var(--clr-light-cream);
   background-color: var(--clr-dark-cyan);
   padding: 1em 1.5em;
+  cursor: pointer;
 }
 
 .btn:active,
@@ -477,19 +478,31 @@ footer a {
 
 .order-summary span {
   color: var(--clr-dark-cyan);
+  text-transform: capitalize;
 }
 
-#order-summary-modal:target {
+.order-summary-modal.open {
   display: block;
 }
 
 .order-summary-modal {
-  /* display: none; */
+  display: none;
+  content: '';
+  position: fixed;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.order-summary-modal .content {
+  position: fixed;
+  margin: var(--spacer);
+  margin-bottom: auto;
   background-color: var(--clr-light-cream);
   text-align: left;
-  /* padding: var(--spacer); */
   border-radius: var(--border-radius);
-  margin-bottom: var(--spacer);
+  margin-bottom: auto;
   overflow: hidden;
 }
 
@@ -515,6 +528,7 @@ footer a {
 
 .order-summary-modal p span {
   color: var(--clr-dark-cyan);
+  text-transform: capitalize;
 }
 
 .order-summary-modal .btn {
