@@ -11,6 +11,9 @@ const planOptions = {
 };
 
 const toggleBtns = document.querySelectorAll('.toggle-show-btn');
+const coffeeOptionsHeadings = document.querySelectorAll(
+  '.coffee-option__heading'
+);
 
 // Order Summary radio buttons
 const orderSummaryPackaged = document.getElementById('order-summary-packaged');
@@ -86,8 +89,8 @@ function updateOrderSummaryModal() {
   orderSummaryModalFrequency.innerText = planOptions['frequency'];
 }
 
-toggleBtns.forEach((button) =>
-  button.addEventListener('click', (e) => {
+coffeeOptionsHeadings.forEach((heading) =>
+  heading.addEventListener('click', (e) => {
     e.preventDefault();
     toggleOption(e.target);
   })

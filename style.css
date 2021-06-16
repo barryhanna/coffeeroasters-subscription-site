@@ -266,6 +266,10 @@ footer a {
   gap: calc(var(--spacer) * 2);
 }
 
+button {
+  cursor: pointer;
+}
+
 .btn {
   display: inline-block;
   border: 0;
@@ -275,7 +279,6 @@ footer a {
   color: var(--clr-light-cream);
   background-color: var(--clr-dark-cyan);
   padding: 1em 1.5em;
-  cursor: pointer;
 }
 
 .btn:active,
@@ -314,12 +317,10 @@ footer a {
   background-size: cover;
 }
 
-.bg-commitment {
-  background-image: url('./assets/about/mobile/image-commitment.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
+.commitment-img {
+  height: 400px;
   margin-top: var(--spacer);
-  padding-top: 500px;
+  border-radius: var(--border-radius);
 }
 
 .quality {
@@ -327,7 +328,7 @@ footer a {
   background-color: var(--clr-dark-grey-blue);
   margin-top: calc(var(--spacer) * 5);
   padding: 1rem;
-  padding-top: 10rem;
+  padding-bottom: calc(var(--spacer) * 5);
   overflow: visible;
 }
 
@@ -337,18 +338,14 @@ footer a {
   color: var(--clr-light-cream);
 }
 
-.quality::before {
-  position: absolute;
+.quality img {
   display: block;
-  top: -15%;
-  left: 2rem;
-  content: '';
-  background-image: url('./assets/about/mobile/image-quality.jpg');
+  margin-top: -15%;
+  margin-bottom: var(--spacer);
+  margin-left: auto;
+  margin-right: auto;
   width: 279px;
   height: 156px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-position-y: -78px;
   border-radius: var(--border-radius);
 }
 
@@ -415,7 +412,8 @@ footer a {
   font-family: var(--fnt-ff-heading);
   background-color: transparent;
   padding: 1em;
-  cursor: pointer;
+  padding-right: 0;
+  transform: rotate(0deg);
 }
 
 .toggle-show-btn:active,
@@ -427,11 +425,9 @@ footer a {
   background-color: hsl(215, 5%, 54%);
 }
 
-.toggle-show-btn {
-  transform: rotate(0deg);
-}
-
 .open .toggle-show-btn {
+  padding-right: var(--spacer);
+  padding-left: 0;
   transform: rotate(180deg);
 }
 
@@ -457,6 +453,7 @@ footer a {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  cursor: pointer;
 }
 
 .coffee-option input[type='radio'] {
@@ -468,6 +465,7 @@ footer a {
   display: block;
   padding: 1em;
   border-radius: 9px;
+  cursor: pointer;
 }
 
 .coffee-option input[type='radio']:checked + label,
@@ -493,10 +491,15 @@ footer a {
 
 .coffee-option label {
   text-align: left;
+  width: 100%;
 }
 
 .coffee-option label > h3 {
   color: var(--clr-dark-grey-blue);
+}
+
+.coffee-option label > p {
+  margin-left: 0;
 }
 
 .order-summary {
@@ -532,7 +535,6 @@ footer a {
 
 .order-summary-modal {
   display: none;
-  content: '';
   position: fixed;
   inset: 0;
   height: 100%;
@@ -542,12 +544,15 @@ footer a {
 
 .order-summary-modal .content {
   position: fixed;
+  left: 50%;
+  top: 40%;
   margin: var(--spacer);
   margin-bottom: auto;
   background-color: var(--clr-light-cream);
   text-align: left;
   border-radius: var(--border-radius);
   margin-bottom: auto;
+  transform: translate(-50%, -50%);
   overflow: hidden;
 }
 
