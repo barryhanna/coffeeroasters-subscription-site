@@ -1,3 +1,5 @@
+'use strict';
+
 // Default plan options, used to populate initial order
 // summary and order summary modal.
 const planOptions = {
@@ -40,14 +42,18 @@ const form = document.getElementById('coffee-form');
 
 const planBtn = document.querySelector('.plan-btn');
 
-planBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  document.querySelector('.order-summary-modal').classList.toggle('open');
-});
+if (planBtn) {
+  planBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.querySelector('.order-summary-modal').classList.toggle('open');
+  });
+}
 
-Array.from(form.elements).forEach((element) =>
-  element.addEventListener('change', updateOrder)
-);
+if (form) {
+  Array.from(form.elements).forEach((element) =>
+    element.addEventListener('change', updateOrder)
+  );
+}
 
 function updateOrder() {
   planOptions.packaged = form.elements['packaged'].value;
@@ -98,21 +104,39 @@ const orderSummaryModalContent = document.querySelector(
   '.order-summary-modal .content'
 );
 
-checkoutBtn.addEventListener('click', (e) => {
-  e.currentTarget.closest('.order-summary-modal').classList.toggle('open');
+if (checkoutBtn) {
+  checkoutBtn.addEventListener('click', (e) => {
+    e.currentTarget.closest('.order-summary-modal').classList.toggle('open');
+  });
+}
+
+if (orderSummaryModal) {
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && orderSummaryModal.classList.contains('open')) {
+      orderSummaryModal.classList.remove('open');
+    }
+  });
+
+  orderSummaryModal.addEventListener('click', (e) => {
+    const isOutside = !e.target.closest('.content');
+    if (isOutside) {
+      orderSummaryModal.classList.remove('open');
+    }
+  });
+}
+
+// Burger Menu
+const btnBurgerClose = document.querySelector('.burger-close');
+const burgerMenu = document.querySelector('.burger-menu');
+
+btnBurgerClose.addEventListener('click', (e) => {
+  burgerMenu.style.display = 'none';
 });
 
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && orderSummaryModal.classList.contains('open')) {
-    orderSummaryModal.classList.remove('open');
-  }
-});
+const btnNavToggle = document.querySelector('.nav-toggle');
 
-orderSummaryModal.addEventListener('click', (e) => {
-  const isOutside = !e.target.closest('.content');
-  if (isOutside) {
-    orderSummaryModal.classList.remove('open');
-  }
+btnNavToggle.addEventListener('click', (e) => {
+  burgerMenu.style.display = 'block';
 });
 
 document.onload = updateOrderSummaries();
