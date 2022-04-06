@@ -67,28 +67,6 @@ function updateOrder() {
   updateOrderSummaries();
 }
 
-// Update the Order Summary and Order Summary Modal
-function updateOrderSummaries() {
-  updateOrderSummary();
-  updateOrderSummaryModal();
-}
-
-function updateOrderSummary() {
-  orderSummaryPackaged.innerText = planOptions['packaged'];
-  orderSummaryType.innerText = planOptions['type'];
-  orderSummaryAmount.innerText = planOptions['amount'];
-  orderSummaryGrind.innerText = planOptions['grind'];
-  orderSummaryFrequency.innerText = planOptions['frequency'];
-}
-
-function updateOrderSummaryModal() {
-  orderSummaryModalPackaged.innerText = planOptions['packaged'];
-  orderSummaryModalType.innerText = planOptions['type'];
-  orderSummaryModalAmount.innerText = planOptions['amount'];
-  orderSummaryModalGrind.innerText = planOptions['grind'];
-  orderSummaryModalFrequency.innerText = planOptions['frequency'];
-}
-
 coffeeOptionsHeadings.forEach((heading) =>
   heading.addEventListener('click', (e) => {
     e.preventDefault();
@@ -141,5 +119,33 @@ const btnNavToggle = document.querySelector('.nav-toggle');
 btnNavToggle.addEventListener('click', (e) => {
   burgerMenu.style.display = 'block';
 });
+
+// Update the Order Summary and Order Summary Modal
+function updateOrderSummaries() {
+  updateOrderSummary();
+  updateOrderSummaryModal();
+}
+
+function updateOrderSummary() {
+  if (!orderSummaryPackaged) {
+    return;
+  }
+  orderSummaryPackaged.innerText = planOptions['packaged'];
+  orderSummaryType.innerText = planOptions['type'];
+  orderSummaryAmount.innerText = planOptions['amount'];
+  orderSummaryGrind.innerText = planOptions['grind'];
+  orderSummaryFrequency.innerText = planOptions['frequency'];
+}
+
+function updateOrderSummaryModal() {
+  if (!orderSummaryModalPackaged) {
+    return;
+  }
+  orderSummaryModalPackaged.innerText = planOptions['packaged'];
+  orderSummaryModalType.innerText = planOptions['type'];
+  orderSummaryModalAmount.innerText = planOptions['amount'];
+  orderSummaryModalGrind.innerText = planOptions['grind'];
+  orderSummaryModalFrequency.innerText = planOptions['frequency'];
+}
 
 document.onload = updateOrderSummaries();

@@ -21,6 +21,7 @@
   --fnt-ff-body: 'Barlow', sans-serif;
 
   --fnt-size-900: 9.375rem;
+  --fnt-size-850: 6rem;
   --fnt-size-800: 4.5rem;
   --fnt-size-700: 2.5rem;
   --fnt-size-500: 2rem;
@@ -191,7 +192,7 @@ p {
   .hero {
     text-align: left;
     padding-left: var(--spacer);
-    background-image: url('/assets/home/tablet/image-hero-coffeepress.jpg');
+    background-image: url('./assets/home/tablet/image-hero-coffeepress.jpg');
     background-size: cover;
     background-position: 50% 0%;
     background-repeat: no-repeat;
@@ -213,6 +214,7 @@ p {
   position: relative;
   font-size: var(--fnt-size-700);
   text-transform: lowercase;
+  background-clip: text;
   -webkit-background-clip: text;
 }
 
@@ -220,7 +222,7 @@ p {
   content: '';
   position: absolute;
   height: 100%;
-  width: 100%;
+  width: 100vw;
   left: 0;
   top: 0;
   background-image: linear-gradient(
@@ -238,7 +240,7 @@ p {
 
 @media (min-width: 768px) {
   .collection h2 {
-    font-size: var(--fnt-size-900);
+    font-size: var(--fnt-size-850);
     z-index: -1;
   }
 
@@ -279,9 +281,8 @@ p {
 }
 
 .choose-us {
-  background-color: hsla(216, 17%, 21%, 1);
+  position: relative;
   color: var(--clr-light-cream);
-  height: 900px;
 }
 
 .why-choose {
@@ -297,20 +298,51 @@ p {
   border-radius: var(--border-radius);
 }
 
-.why-choose.bg-bean {
-  --bg-icon: url('./assets/home/desktop/icon-coffee-bean.svg');
+.why-choose__icon {
+  height: 72px;
+  width: 72px;
 }
 
-.why-choose.bg-giftbox {
-  --bg-icon: url('./assets/home/desktop/icon-gift.svg');
+section .bg-blue {
+  background: hsla(216, 17%, 21%, 1);
+  border-radius: var(--border-radius);
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  margin-top: 0;
 }
 
-.why-choose.bg-van {
-  --bg-icon: url('./assets/home/desktop/icon-truck.svg');
-}
+@media (min-width: 768px) {
+  .why-choose {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    --spacer: 0.5rem;
+    margin-inline: var(--spacer);
+    margin-block: var(--spacer);
+    padding-block: calc(var(--spacer, 1rem) * 4);
+  }
 
-section.how-it-works {
-  padding-top: 800px;
+  .choose-us h2 {
+    font-size: 2rem;
+  }
+
+  .why-choose div {
+    text-align: left;
+  }
+
+  .why-choose h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .why-choose p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
 }
 
 .how-it-works .heading {
