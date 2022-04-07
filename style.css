@@ -301,13 +301,14 @@ p {
 .why-choose__icon {
   height: 72px;
   width: 72px;
+  object-fit: contain;
 }
 
-section .bg-blue {
+.bg-blue {
   background: hsla(216, 17%, 21%, 1);
   border-radius: var(--border-radius);
   position: absolute;
-  height: 50%;
+  height: 58%;
   width: 100%;
   left: 0;
   top: 0;
@@ -319,11 +320,13 @@ section .bg-blue {
   .why-choose {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 2rem;
     --spacer: 0.5rem;
-    margin-inline: var(--spacer);
+    margin-inline: auto;
     margin-block: var(--spacer);
     padding-block: calc(var(--spacer, 1rem) * 4);
+    max-width: 573px;
   }
 
   .choose-us h2 {
@@ -332,6 +335,11 @@ section .bg-blue {
 
   .why-choose div {
     text-align: left;
+  }
+
+  .why-choose__icon {
+    height: 56px;
+    width: 56px;
   }
 
   .why-choose h3 {
