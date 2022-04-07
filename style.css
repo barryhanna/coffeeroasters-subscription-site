@@ -406,6 +406,7 @@ p {
   .how-it-works__item h3 {
     font-size: 1.75rem;
     line-height: 2rem;
+    max-width: 10ch;
   }
 
   .how-it-works__item .step-number {
@@ -529,8 +530,59 @@ button {
 
 .commitment-img {
   height: 400px;
-  margin-top: var(--spacer);
+  width: 327px;
+  background-image: url('/assets/about/mobile/image-commitment.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-inline: auto;
   border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.our-commitment h2 {
+  font-size: 2rem;
+  line-height: 3;
+}
+
+@media (min-width: 768px) {
+  .bg-about-us {
+    background-image: url('./assets/about/tablet/image-hero-whitecup.jpg');
+  }
+
+  .about-us {
+    text-align: left;
+    padding-left: 4rem;
+  }
+
+  .about-us h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .about-us p {
+    margin-left: 0;
+    max-width: 55ch;
+    line-height: 1.5;
+  }
+
+  .our-commitment {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .our-commitment h2 {
+    font-size: 2rem;
+    line-height: 3;
+  }
+
+  .commitment-img {
+    height: 100%;
+    width: 100%;
+    background-image: url('/assets/about/tablet/image-commitment.jpg');
+    background-size: contain;
+    background-position: 50% 50%;
+  }
 }
 
 .quality {
