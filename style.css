@@ -379,6 +379,8 @@ p {
 @media (min-width: 768px) {
   .how-it-works__steps-container {
     display: flex;
+    justify-content: center;
+    margin-inline: auto;
   }
 
   .how-it-works {
@@ -398,9 +400,14 @@ p {
     margin-top: 3rem;
   }
 
+  .how-it-works__item {
+    flex: 1;
+  }
+
   .how-it-works__item p,
   .how-it-works__item h3 {
     padding-right: 1.5rem;
+    margin-left: 0;
   }
 
   .how-it-works__item h3 {
@@ -577,11 +584,13 @@ button {
   }
 
   .commitment-img {
-    height: 100%;
-    width: 100%;
+    height: 470px;
+    width: 281px;
     background-image: url('/assets/about/tablet/image-commitment.jpg');
     background-size: contain;
     background-position: 50% 50%;
+    align-self: center;
+    margin-left: 0;
   }
 }
 
@@ -600,8 +609,9 @@ button {
   color: var(--clr-light-cream);
 }
 
-.quality img {
-  display: block;
+.quality-img {
+  background-image: url('./assets/about/mobile/image-quality.jpg');
+  background-size: cover;
   margin-top: -15%;
   margin-bottom: var(--spacer);
   margin-left: auto;
@@ -609,6 +619,15 @@ button {
   width: 279px;
   height: 156px;
   border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .quality-img {
+    background-image: url('./assets/about/tablet/image-quality.jpg');
+    width: 573px;
+    height: 320px;
+  }
 }
 
 .addresses h2 {
@@ -622,7 +641,6 @@ button {
   background-position: top center;
   padding-top: calc(var(--spacer) * 4);
   margin-bottom: var(--spacer);
-
   padding-bottom: calc(var(--spacer) * 2);
 }
 
