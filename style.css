@@ -609,6 +609,11 @@ button {
   color: var(--clr-light-cream);
 }
 
+.quality p {
+  max-width: 55ch;
+  margin-inline: auto;
+}
+
 .quality-img {
   background-image: url('./assets/about/mobile/image-quality.jpg');
   background-size: cover;
@@ -660,6 +665,32 @@ button {
 }
 .address.au {
   background-image: url('./assets/about/desktop/illustration-australia.svg');
+}
+
+@media (min-width: 768px) {
+  .address-list {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+  }
+
+  .address {
+    background-position: top left;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .address.uk,
+  .address.ca,
+  .address.au {
+    align-self: flex-start;
+  }
+
+  .address h3,
+  p {
+    margin-left: 0;
+  }
 }
 
 /* Plan */
