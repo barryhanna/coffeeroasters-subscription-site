@@ -84,6 +84,7 @@ header nav ul {
 header nav ul a {
   font-size: 0.75rem;
   text-decoration: none;
+  color: var(--clr-grey);
 }
 
 header nav ul a:visited {
@@ -160,12 +161,19 @@ header nav ul a:visited {
 }
 
 section {
+  --space-multiply: 5;
   border-radius: var(--border-radius);
-  padding-top: calc(var(--spacer) * 5);
-  padding-bottom: calc(var(--spacer) * 5);
+  padding-top: calc(var(--spacer) * var(--space-multiply, 1));
+  padding-bottom: calc(var(--spacer) * var(--space-multiply, 1));
   line-height: 2;
   margin-top: var(--spacer);
   margin-bottom: var(--spacer);
+}
+
+@media (min-width: 768px) {
+  section {
+    --space-multiply: 2;
+  }
 }
 
 p {
@@ -331,6 +339,11 @@ p {
 
   .choose-us h2 {
     font-size: 2rem;
+    padding-top: 4rem;
+  }
+
+  .choose-us-intro p {
+    max-width: calc(var(--measure) * 1.75);
   }
 
   .why-choose div {
@@ -357,10 +370,64 @@ p {
   color: var(--clr-grey);
 }
 
-.how-it-works .step-number {
+.how-it-works__item .step-number {
   font-family: var(--fnt-ff-heading);
   font-size: var(--fnt-size-800);
   color: var(--clr-pale-orange);
+}
+
+@media (min-width: 768px) {
+  .how-it-works__steps-container {
+    display: flex;
+  }
+
+  .how-it-works {
+    text-align: left;
+  }
+
+  .how-it-works h2 {
+    font-size: 1.75rem;
+  }
+
+  .how-it-works .btn {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    padding-block: 1rem;
+    margin-right: auto;
+    margin-top: 3rem;
+  }
+
+  .how-it-works__item p,
+  .how-it-works__item h3 {
+    padding-right: 1.5rem;
+  }
+
+  .how-it-works__item h3 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+
+  .how-it-works__item .step-number {
+    position: relative;
+    border-top: 1px solid var(--clr-pale-orange);
+  }
+
+  .how-it-works .step-number::before {
+    content: '';
+    position: absolute;
+    background: white;
+    top: -1rem;
+    height: 30px;
+    width: 30px;
+    border: 1px solid var(--clr-dark-cyan);
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .how-it-works__item:last-of-type .step-number {
+    border-top: none;
+  }
 }
 
 footer {
@@ -397,6 +464,16 @@ footer a {
   align-items: center;
   font-size: var(--fnt-size-400);
   gap: calc(var(--spacer) * 2);
+}
+
+@media (min-width: 768px) {
+  footer nav ul {
+    flex-direction: row;
+  }
+
+  .social-icons {
+    gap: var(--spacer);
+  }
 }
 
 button {
