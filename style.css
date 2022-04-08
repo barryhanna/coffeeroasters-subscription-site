@@ -788,6 +788,11 @@ button {
   .how-it-works-plan .how-it-works p {
     padding-right: 3rem;
   }
+
+  .create-plan-hero {
+    text-align: left;
+    padding-left: var(--spacer);
+  }
 }
 
 .toggle-show-btn {
