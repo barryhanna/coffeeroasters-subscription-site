@@ -778,7 +778,7 @@ button {
     content: '';
     position: absolute;
     top: -1px;
-    left: 1px;
+    left: 0;
     width: 15px;
     height: 1px;
     background-color: var(--clr-dark-grey-blue);
@@ -791,7 +791,7 @@ button {
 
   .create-plan-hero {
     text-align: left;
-    padding-left: var(--spacer);
+    padding-left: calc(var(--spacer) * 2);
   }
 }
 
@@ -893,6 +893,28 @@ button {
   margin-left: 0;
 }
 
+@media (min-width: 768px) {
+  .coffee-option.open ul {
+    display: flex;
+    gap: calc(var(--spacer) / 4);
+    margin-top: var(--spacer);
+  }
+
+  .coffee-option__heading {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .coffee-option label {
+    margin-inline: 0;
+    height: 100%;
+  }
+
+  .coffee-option h3 {
+    font-size: 1.5rem;
+  }
+}
+
 .order-summary {
   background-color: var(--clr-dark-grey-blue);
   font-size: var(--fnt-size-400);
@@ -979,9 +1001,83 @@ button {
   margin: var(--spacer);
 }
 
+.checkout-panel-wide {
+  display: none;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.checkout-panel-wide .order-total {
+  font-family: var(--fnt-ff-heading);
+  font-size: var(--fnt-size-500);
+}
+
+.checkout-panel-wide span {
+  margin-left: var(--spacer);
+}
+
+.checkout-panel-wide > * {
+  flex: 1;
+  margin: 0;
+}
+
+.checkout-panel-wide {
+  margin-bottom: var(--spacer);
+}
+
 .plan-btn {
   padding: 1em 1.5em;
   font-size: var(--fnt-size-300);
   margin-top: calc(var(--spacer) * 2);
   margin-bottom: calc(var(--spacer) * 4);
+}
+
+@media (min-width: 768px) {
+  .order-summary {
+    margin-top: calc(var(--spacer) * 2);
+  }
+
+  .coffee-option li {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .coffee-option input[type='radio'] + label {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .order-summary h3 {
+    margin-top: 0;
+  }
+
+  .order-summary-modal .content {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 70%;
+    margin-bottom: auto;
+    background-color: var(--clr-light-cream);
+    text-align: left;
+    border-radius: var(--border-radius);
+    margin-bottom: auto;
+    transform: translate(-50%, -50%);
+  }
+
+  .order-summary-modal .content p {
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+
+  .checkout-panel-wide {
+    display: flex;
+  }
+
+  .checkout-panel {
+    display: none;
+  }
+
+  .plan-btn {
+    font-size: 1.2rem;
+  }
 }
