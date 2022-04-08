@@ -715,6 +715,19 @@ button {
   margin: calc(var(--spacer) / 2);
 }
 
+.how-it-works-plan .heading {
+  color: var(--clr-grey);
+}
+
+.how-it-works-plan .step-number {
+  font-family: var(--fnt-ff-heading);
+  font-size: var(--fnt-size-800);
+  color: var(--clr-pale-orange);
+}
+
+@media (min-width: 768px) {
+}
+
 .toggle-show-btn {
   display: inline-block;
   border: 0;
