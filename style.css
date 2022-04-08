@@ -726,6 +726,68 @@ button {
 }
 
 @media (min-width: 768px) {
+  .how-it-works-plan--container {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    padding-inline: var(--spacer);
+  }
+
+  .how-it-works-plan > * {
+    flex: 1;
+    margin-inline: 0;
+  }
+
+  .how-it-works-plan h3 {
+    margin-left: 0;
+    max-width: 8ch;
+  }
+
+  .how-it-works-plan .step-number {
+    position: relative;
+    border-top: 1px solid var(--clr-pale-orange);
+  }
+
+  .how-it-works-plan .step-number::before {
+    content: '';
+    position: absolute;
+    background: transparent;
+    top: -1rem;
+    height: 30px;
+    width: 30px;
+    border: 1px solid var(--clr-dark-cyan);
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .how-it-works-plan .how-it-works:last-of-type .step-number {
+    border-top: none;
+  }
+
+  .how-it-works-plan .how-it-works:last-of-type .step-number::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 1px;
+    background-color: var(--clr-pale-orange);
+  }
+
+  .how-it-works-plan .how-it-works:first-of-type .step-number::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 1px;
+    width: 15px;
+    height: 1px;
+    background-color: var(--clr-dark-grey-blue);
+    z-index: 1;
+  }
+
+  .how-it-works-plan .how-it-works p {
+    padding-right: 3rem;
+  }
 }
 
 .toggle-show-btn {
