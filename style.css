@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Fraunces:wght@900&display=fallback');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fraunces:wght@900&display=fallback');
 
 *,
 *::after,
@@ -16,6 +16,7 @@
   --clr-light-cream: hsl(43, 78%, 98%);
   --clr-lighter-cream: hsl(40, 29%, 94%);
   --clr-grey: hsl(215, 5%, 54%);
+  --clr-black: rgba(51, 61, 75, 1);
 
   --fnt-ff-heading: 'Fraunces', serif;
   --fnt-ff-body: 'Barlow', sans-serif;
@@ -89,6 +90,10 @@ header nav ul a {
 
 header nav ul a:visited {
   color: var(--clr-grey);
+}
+
+header nav ul a:hover {
+  color: rgba(51, 61, 75, 1);
 }
 
 @media (min-width: 768px) {
@@ -288,6 +293,12 @@ p {
   }
 }
 
+@media (min-width: 1440px) {
+  .collection-container {
+    display: flex;
+  }
+}
+
 .choose-us {
   position: relative;
   color: var(--clr-light-cream);
@@ -363,6 +374,12 @@ p {
   .why-choose p {
     font-size: 1rem;
     line-height: 1.5;
+  }
+}
+
+@media (min-width: 1440px) {
+  .why-choose-container {
+    display: flex;
   }
 }
 
@@ -481,6 +498,14 @@ footer a {
 
   .social-icons {
     gap: var(--spacer);
+  }
+}
+
+@media (min-width: 1440px) {
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
