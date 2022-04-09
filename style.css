@@ -221,6 +221,19 @@ p {
   .hero p {
     margin: 0;
   }
+
+  .hero a {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero {
+    background-image: url('./assets/home/desktop/image-hero-coffeepress.jpg');
+    background-size: cover;
+    background-position: 60% 0%;
+    border-radius: var(--border-radius);
+  }
 }
 
 .collection h2 {
@@ -294,8 +307,25 @@ p {
 }
 
 @media (min-width: 1440px) {
+  .collection h2 {
+    font-size: var(--fnt-size-900);
+  }
+
   .collection-container {
     display: flex;
+    --spacer: -1.5rem;
+  }
+
+  .collection-item {
+    flex-direction: column;
+  }
+
+  .collection-item div {
+    text-align: center;
+  }
+
+  .collection-item img {
+    max-width: 256px;
   }
 }
 
@@ -503,9 +533,38 @@ footer a {
 
 @media (min-width: 1440px) {
   footer {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    align-content: center;
+    padding: 1rem;
+  }
+
+  footer > * {
+    margin-top: 0;
+  }
+
+  footer div {
+    display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-content: center;
+    --spacer: 1.5rem;
+    width: 100%;
+  }
+
+  footer div :first-child > * {
+    width: max-content;
+  }
+
+  footer .logo {
+    margin-top: 0;
+  }
+
+  footer .social-icons {
+    justify-content: flex-end;
+    margin: 1rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    transform: translateY(-25%);
   }
 }
 
