@@ -385,6 +385,7 @@ p {
 
   .choose-us-intro p {
     max-width: calc(var(--measure) * 1.75);
+    margin-inline: auto;
   }
 
   .why-choose div {
@@ -514,11 +515,22 @@ footer a {
 
 .social-icons {
   display: flex;
-  color: white;
+  fill: white;
   justify-content: center;
   align-items: center;
   font-size: var(--fnt-size-400);
   gap: calc(var(--spacer) * 2);
+}
+
+.social-icons svg {
+  fill: white;
+  height: 1.5rem;
+  width: 1.5rem;
+  transition: fill 500ms ease-in;
+}
+
+.social-icons svg:hover {
+  fill: var(--clr-pale-orange);
 }
 
 @media (min-width: 768px) {
@@ -1164,4 +1176,16 @@ button {
   .plan-btn {
     font-size: 1.2rem;
   }
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
 }
