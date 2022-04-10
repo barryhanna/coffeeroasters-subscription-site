@@ -560,11 +560,6 @@ footer a {
     justify-content: space-between;
     align-content: center;
     --spacer: 1.5rem;
-    width: 100%;
-  }
-
-  footer div :first-child > * {
-    width: max-content;
   }
 
   footer .logo {
