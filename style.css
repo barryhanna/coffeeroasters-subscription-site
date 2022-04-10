@@ -513,6 +513,10 @@ footer a {
   text-decoration: none;
 }
 
+footer a:hover {
+  color: white;
+}
+
 .social-icons {
   display: flex;
   fill: white;
