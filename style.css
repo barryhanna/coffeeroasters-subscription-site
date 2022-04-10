@@ -412,6 +412,10 @@ p {
   .why-choose-container {
     display: flex;
   }
+
+  .why-choose {
+    padding-block: 6rem;
+  }
 }
 
 .how-it-works .heading {
@@ -694,6 +698,36 @@ button {
   }
 }
 
+@media (min-width: 1440px) {
+  .bg-about-us {
+    background-image: url('./assets/about/desktop/image-hero-whitecup.jpg');
+  }
+
+  .our-commitment {
+    gap: 8rem;
+    align-items: center;
+    max-width: 1000px;
+    margin-inline: auto;
+  }
+
+  .our-commitment div:nth-child(2) {
+    margin-top: 0;
+  }
+
+  .our-commitment p {
+    max-width: 540px;
+  }
+
+  .commitment-img {
+    background-image: url('./assets/about/desktop/image-commitment.jpg');
+    background-size: cover;
+    height: 520px;
+    width: 445px;
+    border-radius: var(--border-radius);
+    overflow: clip;
+  }
+}
+
 .quality {
   position: relative;
   background-color: var(--clr-dark-grey-blue);
@@ -732,6 +766,25 @@ button {
     background-image: url('./assets/about/tablet/image-quality.jpg');
     width: 573px;
     height: 320px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .quality {
+    display: flex;
+    text-align: left;
+    padding-left: 4rem;
+    padding-bottom: 1rem;
+    max-width: 1111px;
+    margin-inline: auto;
+  }
+  .quality-img {
+    order: 1;
+    background-image: url('./assets/about/desktop/image-quality.jpg');
+    width: 445px;
+    height: 474px;
+    margin-right: 5%;
+    margin-top: -10%;
   }
 }
 
@@ -779,6 +832,10 @@ button {
     padding-top: 80px;
     display: flex;
     flex-direction: column;
+  }
+
+  .addresses h2 {
+    text-align: left;
   }
 
   .address.uk,
@@ -1192,4 +1249,18 @@ button {
   position: absolute;
   width: 1px;
   white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    max-width: 600px;
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .wrapper {
+    max-width: 1111px;
+    margin-inline: auto;
+  }
 }
