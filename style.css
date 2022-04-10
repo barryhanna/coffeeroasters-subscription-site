@@ -630,6 +630,11 @@ button {
   background-size: cover;
 }
 
+.our-commitment {
+  max-width: 700px;
+  margin-inline: auto;
+}
+
 .commitment-img {
   height: 400px;
   width: 327px;
