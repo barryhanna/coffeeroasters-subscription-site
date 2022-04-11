@@ -823,7 +823,7 @@ button {
 @media (min-width: 768px) {
   .address-list {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     text-align: left;
   }
 
@@ -846,7 +846,7 @@ button {
 
   .address h3,
   p {
-    margin-left: 0;
+    margin-inline: 0;
   }
 }
 
