@@ -523,6 +523,15 @@ p {
   color: hsl(179, 81%, 29%);
 }
 
+.coffee-option-nav li[data-selected] a {
+  opacity: 1;
+  color: #333d4b;
+}
+
+.coffee-option-nav li[data-selected] a span {
+  color: #83888f;
+}
+
 .coffee-option-nav a:hover {
   opacity: 0.6;
 }
