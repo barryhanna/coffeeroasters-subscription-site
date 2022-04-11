@@ -490,6 +490,40 @@ p {
   }
 }
 
+.coffee-option-nav {
+  font-family: var(--fnt-ff-heading);
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.coffee-option-nav ul {
+  list-style: none;
+}
+
+.coffee-option-nav a {
+  text-decoration: none;
+  color: var(--clr-dark-grey-blue);
+  opacity: 0.4;
+  margin-bottom: 1rem;
+}
+
+.coffee-option-nav span {
+  margin-right: 1rem;
+}
+
+.coffee-option-nav li {
+  border-bottom: 1px solid #83888f;
+  opacity: 0.25;
+}
+
+.coffee-option-nav li:first-of-type a span {
+  color: hsl(179, 81%, 29%);
+}
+
+.coffee-option-nav a:hover {
+  opacity: 0.6;
+}
+
 footer {
   display: flex;
   flex-direction: column;
@@ -883,6 +917,12 @@ button {
 }
 
 @media (min-width: 768px) {
+  .create-plan-bg {
+    background-image: url('./assets/plan/tablet/image-hero-blackcup.jpg');
+    background-size: cover;
+    background-position: 50% 0%;
+  }
+
   .how-it-works-plan--container {
     display: flex;
     justify-content: center;
@@ -949,6 +989,14 @@ button {
   .create-plan-hero {
     text-align: left;
     padding-left: calc(var(--spacer) * 2);
+  }
+}
+
+@media (min-width: 1440px) {
+  .create-plan-bg {
+    background-image: url('./assets/plan/desktop/image-hero-blackcup.jpg');
+    background-size: cover;
+    background-position: 50% 0%;
   }
 }
 
