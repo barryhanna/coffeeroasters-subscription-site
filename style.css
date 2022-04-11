@@ -491,9 +491,12 @@ p {
 }
 
 .coffee-option-nav {
+  display: none;
   font-family: var(--fnt-ff-heading);
   font-size: 1.5rem;
   text-align: left;
+  max-width: 800px;
+  margin-inline: auto;
 }
 
 .coffee-option-nav ul {
@@ -504,7 +507,6 @@ p {
   text-decoration: none;
   color: var(--clr-dark-grey-blue);
   opacity: 0.4;
-  margin-bottom: 1rem;
 }
 
 .coffee-option-nav span {
@@ -514,6 +516,7 @@ p {
 .coffee-option-nav li {
   border-bottom: 1px solid #83888f;
   opacity: 0.25;
+  padding-bottom: 1rem;
 }
 
 .coffee-option-nav li:first-of-type a span {
@@ -522,6 +525,35 @@ p {
 
 .coffee-option-nav a:hover {
   opacity: 0.6;
+}
+
+@media (min-width: 768px) {
+  .order-summary p {
+    --measure: 90%;
+    margin-inline: auto;
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: 1440px) {
+  .coffee-options {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    margin-left: 3rem;
+  }
+
+  .coffee-form {
+    max-width: 1063px;
+  }
+
+  .coffee-option-nav {
+    display: block;
+    padding-top: 115px;
+  }
+
+  .order-summary p {
+    max-width: 100%;
+  }
 }
 
 footer {
@@ -1284,6 +1316,8 @@ button {
 
   .plan-btn {
     font-size: 1.2rem;
+    display: block;
+    margin-left: auto;
   }
 }
 
