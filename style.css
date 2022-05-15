@@ -1208,6 +1208,7 @@ button {
   margin: var(--spacer);
   margin-bottom: auto;
   width: 70%;
+  max-width: 880px;
   background-color: var(--clr-light-cream);
   text-align: left;
   border-radius: var(--border-radius);
