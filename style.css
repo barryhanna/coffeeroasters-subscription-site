@@ -96,6 +96,11 @@ header nav ul a:hover {
   color: rgba(51, 61, 75, 1);
 }
 
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 @media (min-width: 768px) {
   :root {
     --spacer: 2.5rem;
